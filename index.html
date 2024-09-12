@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Descripción de tu página web">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Web Development">
+    <meta name="author" content="Tu nombre">
+    <title>TYPESCRIPT, the tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Freehand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="macroContainer">
+        <div class="innerContainer">
+            <div class="imagenConTitulo">
+                <img src="images/tituloPrin.png" alt="Título Principal">
+            </div>
+
+            <div class="slogan">
+                ⚡ JavaScript is Cool, <strong>but TypeScript is the Future</strong>⚡
+            </div>
+
+            <div class="logo">
+                 <img class="logoImage" src="images/logo.png" alt="Logo">
+            </div>
+
+            <div class="empiezalaexplicacion">
+                <div class="tituloParrafoIntroductorio">
+                    TYPESCRIPT :<br>A NEW ERA IN JAVASCRIPT 🚀
+                </div>
+
+                <div class="parrafoIntroductorio">
+                    In the early days of JavaScript, developers faced a challenging reality: dynamic types and runtime errors made code hard to manage and debug. With projects growing in size and complexity, the need for a more robust solution became evident. Enter TypeScript, a powerful superset of JavaScript designed to bring static typing and enhanced tooling to the table.<br><br>
+                    By integrating TypeScript into your workflow, you embark on a journey to make your codebase more predictable and reliable. From the initial installation to converting your existing JavaScript code, TypeScript promises to transform how you write and think about code, making it easier to catch errors early and maintain a clean, organized codebase.
+                </div>
+            </div>
+
+            <div class="tituloChapter">Chapter 1:</div>
+            <div class="subTituloChapter">Setting the Stage 🎭</div>
+
+            <div class="textoPreExplicacion">
+                Before we dive into the magic of TypeScript, we need to prepare our environment. Think of this as sharpening your tools before starting a masterpiece.
+            </div>
+
+            <div class="PasoASeguir">
+                📦 Installation: The First Spell
+            </div>
+
+            <div class="codeBlock">
+                <pre><code>npm install -g typescript
+
+tsc --version</code></pre>
+            </div>
+
+            <div class="textoPostExplicacion">
+                Congratulations! You've summoned TypeScript into your system! ✨
+            </div>
+
+            <div class="tituloChapter">Chapter 2:</div>
+            <div class="subTituloChapter">The Evolution Begins ⚡</div>
+
+            <div class="textoPreExplicacion">
+                Let's start small – just a variable.
+            </div>
+
+            <div class="codeBlock">
+                <pre><code>// JavaScript
+let myVariable = "Hello, JavaScript!";
+
+// TypeScript
+let myVariable: string = "Hello, TypeScript!";</code></pre>
+            </div>
+
+            <div class="textoPostExplicacion">
+                💡 Notice the <code>: string</code>? That's a type annotation, and it tells TypeScript that myVariable is always going to be a string.
+            </div>
+
+            <div class="tituloChapter">Chapter 3:</div>
+            <div class="subTituloChapter">Organized Magic 🪄</div>
+
+            <div class="codeBlock">
+                <pre><code>// JavaScript
+let numbers = [1, 2, 3, 4, 5];
+
+// TypeScript
+let numbers: number[] = [1, 2, 3, 4, 5];</code></pre>
+            </div>
+
+            <div class="textoPostExplicacion">
+                💡 The <code>number[]</code> annotation ensures TypeScript will scream at you if you accidentally try to put anything but numbers into that array.
+            </div>
+
+            <div class="tituloChapter">Chapter 4:</div>
+            <div class="subTituloChapter">Stronger Spells 🧙‍♂️</div>
+
+            <div class="codeBlock">
+                <pre><code>// JavaScript
+function greet(name) {
+  return "Hello, " + name;
+}
+
+// TypeScript
+function greet(name: string): string {
+  return "Hello, " + name;
+}</code></pre>
+            </div>
+
+            <div class="textoPostExplicacion">
+                🔮 TypeScript guarantees that name is always a string, and it promises that the function will return a string, too!
+            </div>
+
+            <div class="tituloChapter">Chapter 5:</div>
+            <div class="subTituloChapter">Typed Creations 🏗️</div>
+
+            <div class="codeBlock">
+                <pre><code>// JavaScript
+let person = {
+  name: "Alice",
+  age: 25
+};
+
+// TypeScript
+let person: { name: string; age: number } = {
+  name: "Alice",
+  age: 25
+};</code></pre>
+            </div>
+
+            <div class="textoPostExplicacion">
+                ✨ TypeScript ensures that every person object has a name that's a string and an age that's a number.
+            </div>
+
+            <div class="tituloChapter">Chapter 6:</div>
+            <div class="subTituloChapter">Type Inference 🧠</div>
+
+            <div class="textoPreExplicacion">
+                TypeScript is smart enough to figure out types on its own in many cases. This is called type inference.
+            </div>
+
+            <div class="codeBlock">
+                <pre><code>let magicNumber = 42; // TypeScript infers this is a number
+let wizard = "Merlin"; // TypeScript infers this is a string
+
+// TypeScript knows the return type is a string
+function castSpell(spell: string) {
+    return `Casting ${spell}!`;
+}</code></pre>
+            </div>
+
+            <div class="textoPostExplicacion">
+                🎩 Type inference helps keep your code clean while still providing type safety!
+            </div>
+
+            <div class="tituloChapter">Chapter 7:</div>
+            <div class="subTituloChapter">Interfaces 🏗️</div>
+
+            <div class="textoPreExplicacion">
+                Interfaces allow you to define the structure of objects.
+            </div>
+
+            <div class="codeBlock">
+                <pre><code>interface Wizard {
+    name: string;
+    age: number;
+    spells: string[];
+}
+
+let gandalf: Wizard = {
+    name: "Gandalf",
+    age: 2019,
+    spells: ["You shall not pass!", "Fly, you fools!"]
+};</code></pre>
+            </div>
+
+            <div class="textoPostExplicacion">
+                🧙‍♂️ Interfaces help you create consistent structures across your codebase!
+            </div>
+
+            <footer>
+                <p class="footer">&copy; 2024 Luisde Cespedes. Made in 6 hours for the Week 11 Hackathon at School of Code.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
