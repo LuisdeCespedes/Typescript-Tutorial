@@ -1,10 +1,14 @@
+html{
+    margin: 0;
+}
+
 body {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #f9f4da;
-    overflow-x: hidden;  
+    overflow-x: hidden;
 }   
 
 .macroContainer {
@@ -23,14 +27,22 @@ body {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    max-width: 850px;
+    max-width: 75%;
     padding: 0 3em; 
     box-sizing: border-box; 
     width: 100%;
 }
 
-.imagenConTitulo {
-    padding: 2em 2em 4em 2em;
+.alittle{
+    font-family: "Freehand", cursive;
+    color: #f088a0;
+    font-size: 3em;
+    padding:  0 1em 1em 1em;
+}
+
+.fotoTITULO{
+    width: 35em;
+    padding: 3em 0 0 0 ;
 }
 
 .slogan {
@@ -38,17 +50,46 @@ body {
     font-size: 1.1em;
 }
 
-.logoImage {
-    height: 10em;
-    margin: 0em 0em 7em 0em;
+.logo-container {
+    position: relative;
+    height: 15em;
+    margin: 2em 0em 7em 0em;
+    scale: 2;
+    padding: 4em 0;
 }
 
-.tituloParrafoIntroductorio {
+.logoImage {
+    height: 70%;
+    transition: transform 0.7s ease-in-out;
+}
+
+
+
+.hoverImage {
+    position: absolute;
+    top: 0;
+    height: 70%;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.logo-container:hover .logoImage {
+    transform: scale(1.07);
+}
+
+.logo-container:hover .hoverImage {
+    opacity: 1;
+    transform: scale(1.07) translateX(-78%) translateY(10%);
+}
+
+
+
+/* .tituloParrafoIntroductorio {
     font-size: 3em;
     padding: 0em 0 2em 0;
     text-align: center;
     font-family: "Bagel Fat One", system-ui;
-}
+} */
 
 .empiezalaexplicacion {
     background-color: #231f20;
@@ -59,7 +100,7 @@ body {
     max-width: 850px;
     box-sizing: border-box;
     padding: 3em 3em 4em 3em;  
-    width: 100%;
+    max-width: 80%;
     border-radius: 50px;
     box-sizing: border-box;
 }
@@ -84,6 +125,7 @@ body {
     padding: 1em;
     margin: 1em 0;
     overflow-x: auto;
+    max-width: 80%;
 }
 
 .codeBlock pre {
@@ -118,4 +160,78 @@ footer {
     font-size: 3em;
     text-align: center;
     padding: 0 0 1em 0;
+}
+
+.imagenConTitulo{
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.cajaGris{
+    background-color: pink;
+}
+
+.superpower-section {
+    border-radius: 50px;
+    padding: 3em;
+    margin: 4em 0;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+.superpower-title {
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 2.5em;
+    color: #f088a0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.superpower-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    margin-bottom: 2em;
+}
+
+.superpower-table th, .superpower-table td {
+    padding: 15px;
+    text-align: center;
+    color: #f9f4da;
+}
+
+.superpower-table th {
+    font-size: 1.2em;
+    color: #f088a0;
+}
+
+.superpower-table tr {
+    background-color: #1a1718;
+    transition: transform 0.3s ease;
+
+}
+
+.superpower-table tr:hover {
+    transform: scale(1.05);
+}
+
+.superpower-icon {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
+.superpower-name {
+    font-family: "Freehand", cursive;
+    color: #f088a0;
+    font-size: 1.2em;
+}
+
+.superpower-description {
+    color: #f9f4da;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 80%;
+    margin: 2em auto 0;
 }
